@@ -64,7 +64,7 @@ Host github.com
 ```
 
 ```bash
-# Clone the git repo to the local machine
+# Clone the git repo (using SSH) to the local machine
 $ git clone git@github.com:ISS-IS02PT/ISR-MR-2020-01-18-IS02PT-GROUP5-FoodRec.git
 ```
 

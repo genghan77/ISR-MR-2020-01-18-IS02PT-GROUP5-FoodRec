@@ -76,7 +76,14 @@ origin  git@github.com:ISS-IS02PT/ISR-MR-2020-01-18-IS02PT-GROUP5-FoodRec.git (p
 ```
 
 ```bash
-# Update your student id and email in README.md file, and then save the file locally
+# Checkout the 'Develop' branch --> only commit directly to 'Develop' branch, and not 'Master' branch
+$ git checkout develop
+Branch 'develop' set up to track remote branch 'develop' from 'origin'.
+Switched to a new branch 'develop'
+```
+
+```bash
+# Locate the README.md file, and update your student id and email, and then save the file locally
 ```
 
 ```bash
@@ -91,6 +98,6 @@ $ git commit -m '<<Commit message here>>'
 
 ```bash
 # Push this new update back to origin, you may be prompted for the password of the ssh private key passphrase if you set it earlier
-$ git push origin master
+$ git push origin develop
 ```
 

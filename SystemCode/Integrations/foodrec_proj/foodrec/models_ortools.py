@@ -102,7 +102,7 @@ def optimizer2(EnergyAmount_kcal,CarbohydrateAmount_g,ProteinAmount_g,TotalFatAm
 
     # Constraint0  Calories -> within the 90% - 110% of recommended 
     constraint0 = solver.Constraint(EnergyAmount_kcal * 0.9, EnergyAmount_kcal * 1.1)
-    # Constraint1  Cabo -> within the 90% - 110% of recommended 
+    # Constraint1  Carbohydrate -> within the 90% - 110% of recommended 
     constraint1 = solver.Constraint(CarbohydrateAmount_g * 0.1 , CarbohydrateAmount_g * 1000  )
     # Constraint2  Protein -> within the 90% - 110% of recommended 
     constraint2 = solver.Constraint(ProteinAmount_g * 0.1 , ProteinAmount_g * 1000 )
@@ -143,7 +143,7 @@ def run_optimizer(EnergyAmount_kcal,CarbohydrateAmount_g,ProteinAmount_g,TotalFa
 # For quick testing without Django
 def main():
     readFoodData(csv_file)
-    foodIndex_result = run_optimizer(EnergyAmount_kcal=500, CarbohydrateAmount_g =50,ProteinAmount_g = 50 , TotalFatAmount_g = 50 )
+    foodIndex_result = run_optimizer(EnergyAmount_kcal=500, CarbohydrateAmount_g =1,ProteinAmount_g = 50 , TotalFatAmount_g = 50 )
     for i in foodIndex_result:
         print('%s' % food_data[i][DATA_FoodName_INDEX], end ='' )
         print(' (Calories=%skcal)' % food_data[i][DATA_EnergyAmount_kcal_INDEX], end ='' )

@@ -81,10 +81,10 @@ def optimizer1(EnergyAmount_kcal):
     return foodIndex_result
 
 # Optimizer 2 for KETO optimization
-def optimizer2(EnergyAmount_kcal,CarbohydrateAmount_g,ProteinAmount_g,TotalFatAmount_g ):
+def optimizer_Dennis_1(EnergyAmount_kcal,CarbohydrateAmount_g,ProteinAmount_g,TotalFatAmount_g ):
 
     # Create the mip solver with the CBC backend
-    solver = pywraplp.Solver('optimizer2',
+    solver = pywraplp.Solver('optimizer_Dennis_1',
                              pywraplp.Solver.CBC_MIXED_INTEGER_PROGRAMMING)
 
     # Declare the objective function
@@ -137,7 +137,7 @@ def optimizer2(EnergyAmount_kcal,CarbohydrateAmount_g,ProteinAmount_g,TotalFatAm
 
 
 def run_optimizer(EnergyAmount_kcal,CarbohydrateAmount_g,ProteinAmount_g,TotalFatAmount_g):
-    return optimizer2(EnergyAmount_kcal,CarbohydrateAmount_g,ProteinAmount_g,TotalFatAmount_g )
+    return optimizer_Dennis_1(EnergyAmount_kcal,CarbohydrateAmount_g,ProteinAmount_g,TotalFatAmount_g )
 
 
 # For quick testing without Django
